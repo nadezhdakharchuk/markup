@@ -1,0 +1,132 @@
+.time-img {
+  display: block;
+  width: 90%;
+  margin: auto;
+}
+
+.time {
+  width: 100%;
+
+  &__img {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__now {
+    display: none;
+
+    .now & {
+      display: block;
+    }
+  }
+
+  &__tomorrow {
+    display: block;
+
+    .now & {
+      display: none;
+    }
+  }
+
+  &__actions {
+    position: relative;
+    margin-top: 20px;
+
+    @media (min-width: $screen-md-min) {
+      padding: 0 180px;
+    }
+
+    @media (max-width: $screen-sm-max) {
+      padding: 0 70px;
+    }
+
+    &:before,
+    &:after {
+      position: relative;
+      display: block;
+      width: 100%;
+
+      content: "";
+      transition: width .3s ease;
+
+      @media (min-width: $screen-md-min) {
+        height: 16px;
+      }
+
+      @media (max-width: $screen-sm-max) {
+        height: 8px;
+      }
+    }
+
+    &:before {
+      background-color: $lite-gray;
+
+      @media (min-width: $screen-md-min) {
+        top: 10px;
+      }
+
+      @media (max-width: $screen-sm-max) {
+        top: 5px;
+      }
+    }
+
+    &:after {
+      background-color: $gradient-start;
+      background-image:
+        linear-gradient(
+          to right,
+          $gradient-start, $gradient-middle, $gradient-end
+        );
+
+      @media (min-width: $screen-md-min) {
+        top: -6px;
+      }
+
+      @media (max-width: $screen-sm-max) {
+        top: -3px;
+      }
+
+      .now & {
+        width: 50%;
+      }
+    }
+  }
+
+  &__action {
+    position: absolute;
+    top: 0;
+    font-family: $second-font-bold;
+    cursor: pointer;
+
+    @media (min-width: $screen-md-min) {
+      font-size: 48px;
+      line-height: 40px;
+    }
+
+    @media (max-width: $screen-sm-max) {
+      font-size: 20px;
+      line-height: 18px;
+    }
+
+    &--tomorrow {
+      right: 0;
+      border-bottom: solid 2px $gray;
+
+      .now & {
+        border-bottom: dashed 1px $gray;
+      }
+    }
+
+    &--now {
+      left: 0;
+      border-bottom: dashed 1px $gray;
+
+      .now & {
+        border-bottom: solid 2px $gray;
+      }
+    }
+  }
+}

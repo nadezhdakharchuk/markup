@@ -1,0 +1,206 @@
+.panel-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: $screen-sm-max) {
+    flex-direction: column;
+  }
+}
+
+.panel-row {
+  display: flex;
+  justify-content: space-between;
+
+  flex-direction: column;
+
+  @media (min-width: $screen-md-min) {
+    width: calc(50% - 15px);
+  }
+}
+
+.panel-column {
+  display: flex;
+
+  &--statistic {
+    justify-content: center;
+    flex-wrap: wrap;
+
+
+    @media (max-width: $screen-xs-min) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.panel {
+  display: flex;
+  align-items: center;
+  width: 270px;
+  margin: 0 15px 30px;
+  margin-bottom: 30px;
+  padding: 20px 10px;
+  background-color: $white;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, .06);
+
+  &__header {
+    flex-basis: 200px;
+    margin: auto;
+    padding: 100px 0 0;
+    background-position: center 30px;
+    background-repeat: no-repeat;
+    font-family: $second-font-bold;
+    text-align: center;
+
+    @media (min-width: $screen-md-min) {
+      font-size: 30px;
+    }
+
+    @media (max-width: $screen-sm-max) and (min-wisth: $screen-xs-min) {
+      font-size: 24px;
+    }
+
+    @media (max-width: $screen-xs-min) {
+      font-size: 18px;
+    }
+
+    &--individual {
+      background-image: svg-load("individual.svg", stroke: none);
+    }
+
+    &--fond {
+      background-image: svg-load("fond.svg", stroke: none);
+    }
+
+    &--owner {
+      background-image: svg-load("owner.svg", stroke: none);
+      margin: 0;
+    }
+  }
+
+  &__text {
+    color: $gray;
+    font-family: $base-font-medium;
+
+    @media (min-width: $screen-xs-min) {
+      margin: 0 0 0 50px;
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    @media (max-width: $screen-xs-min) {
+      margin: 0 0 0 20px;
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
+  &__description {
+    position: relative;
+    margin: 0 0 30px;
+    padding: 0 0 0 30px;
+    font-size: 16px;
+    color: $gray;
+    font-family: $base-font-regular;
+
+    &:before {
+      position: absolute;
+      top: 2px;
+      left: 0;
+      display: block;
+      width: 16px;
+      height: 24px;
+      content: "";
+      background-image: svg-load("header.svg", stroke: none);
+      background-size: 8px 37px;
+      background-repeat: no-repeat;
+    }
+
+    &--owner:before {
+      background-position: 0 -26px;
+    }
+  }
+
+  &__value {
+    font-family: $second-font-bold;
+    color: $gray;
+
+    @media (min-width: $screen-md-min) {
+      font-size: 112px;
+      line-height: 100px;
+    }
+
+    @media (max-width: $screen-sm-max) {
+      font-size: 70px;
+      line-height: 60px;
+    }
+
+    span {
+      color: $black;
+
+      @media (min-width: $screen-md-min) {
+        font-size: 88px;
+      }
+
+      @media (max-width: $screen-sm-max) {
+        font-size: 60px;
+      }
+    }
+  }
+
+  &__unit {
+    margin: -10px 0 20px;
+    color: $black;
+    font-family: $second-font-bold;
+
+    @media (min-width: $screen-md-min) {
+      font-size: 30px;
+    }
+
+    @media (max-width: $screen-sm-max) {
+      font-size: 20px;
+    }
+  }
+
+  &__hint {
+    margin: 0 17px;
+    color: $gray;
+    text-align: center;
+    font-family: $base-font-regular;
+
+
+    @media (min-width: $screen-md-min) {
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    @media (max-width: $screen-sm-max) {
+      font-size: 14px;
+    line-height: 18px;
+    }
+  }
+
+  &--double {
+    width: 100%;
+    max-width: 570px;
+  }
+
+  &--statistic {
+    flex-direction: column;
+
+    @media (min-width: $screen-lg-min) {
+      width: 250px;
+      padding: 60px 20px;
+    }
+
+    @media (max-width: $screen-md-max) and (min-width: $screen-sm-min){
+      width: 220px;
+      padding: 40px 15px;
+    }
+
+    @media (max-width: $screen-xs-max) and (min-width: $screen-xs-min){
+      width: 300px;
+      padding: 35px 10px;
+    }
+  }
+}

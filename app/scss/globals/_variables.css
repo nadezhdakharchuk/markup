@@ -1,0 +1,33 @@
+$base-font-regular: "GothamProRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-medium: "GothamProMedium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-bold: "GothamProBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$second-font-regular: "BebasNeueRegular", Helvetica, Arial, sans-serif;
+$second-font-bold: "BebasNeueBold", Helvetica, Arial, sans-serif;
+
+
+/* Screen sizes */
+$screen-lg-min: 1200px;
+$screen-md-max: 1199px;
+$screen-md-min: 992px;
+$screen-sm-max: 991px;
+$screen-sm-min: 768px;
+$screen-xs-max: 767px;
+$screen-xs-min: 480px;
+
+
+/* Colors */
+
+$white: #fff;
+$black: #000;
+$lite-gray: #f8f8f8;
+$gray: #333;
+$purple: #965EDE;
+
+$gradient-start: #FDA000;
+$gradient-middle: #D3208B;
+$gradient-end: #879AF2;
+
+
+/* Other */
+$radius: 4px;
+
